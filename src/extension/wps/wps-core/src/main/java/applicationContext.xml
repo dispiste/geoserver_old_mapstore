@@ -200,6 +200,10 @@
       <constructor-arg index="0" ref="catalog"/>
     </bean>
     
+    <bean id="uniqueValues" class="org.geoserver.wps.gs.UniqueValues">
+      <constructor-arg index="0" ref="catalog"/>
+    </bean>
+    
     <!--
     Factory for deprecated processes 
     -->
