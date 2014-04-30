@@ -54,11 +54,11 @@ public class UniqueValues implements GeoServerProcess {
 
     @DescribeResult(name="result", description="output result")
     public SimpleFeatureCollection execute(
-            @DescribeParameter(name = "layerName", min = 1, description = "Layer from which field values should be retrieved") String layerName,
-            @DescribeParameter(name = "fieldName", min = 1, description = "Field from which the values should be retrieved") String fieldName,
-            @DescribeParameter(name = "startIndex", min = 0, description = "The index of the first feature to retrieve") Integer startIndex,
-            @DescribeParameter(name = "maxFeatures", min = 0, description = "The maximum numbers of features to fetch") Integer maxFeatures,
-            @DescribeParameter(name = "sort", min = 0, description = "The sort order (ASC, DESC or NONE)") String sort
+            @DescribeParameter(name = "layerName", min = 1, max = 1, description = "Layer from which field values should be retrieved") String layerName,
+            @DescribeParameter(name = "fieldName", min = 1, max = 1, description = "Field from which the values should be retrieved") String fieldName,
+            @DescribeParameter(name = "startIndex", min = 0, max = 1, description = "The index of the first feature to retrieve") Integer startIndex,
+            @DescribeParameter(name = "maxFeatures", min = 0, max = 1, description = "The maximum numbers of features to fetch") Integer maxFeatures,
+            @DescribeParameter(name = "sort", min = 0, max = 1, description = "The sort order (ASC, DESC or NONE)") String sort
             ) throws IOException {
 
         // initial checks on mandatory params
